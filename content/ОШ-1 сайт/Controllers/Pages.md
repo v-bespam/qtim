@@ -253,7 +253,7 @@ likesCount: number
 
 ## HrController
 
-Определяет
+Предоставляет информацию по вакансиям и историям сотрудников
 
 ### Endpoints
 
@@ -268,7 +268,7 @@ likesCount: number
 | GET   | `nest/api/hr/interviews/`           |          |
 | GET   | `nest/api/hr/interview-detail/:id/` |          |
 
-### Получить общую информацию страницы вакансий
+### Получить общую информацию для страницы вакансий
 
 `GET nest/api/hr/common-data/`
 
@@ -292,5 +292,112 @@ likesCount: number
 
 `GET nest/api/hr/vacancies/`
 
+Получает от Strapi список всех вакансий, отсортированный по возрастанию по полю `Sort`
 
+возвращает 200 Ok
 
+Коллекция Strapi: Vacancies, API ID: vacancy
+
+### Получить подробную информацию о вакансии
+
+`GET nest/api/hr/vacancy-detail/:id/`
+
+Получает от Strapi подробную информацию о вакансии.
+
+id: number - ID вакансии
+
+возвращает 200 Ok
+
+Коллекция Strapi: Vacancies, API ID: vacancy
+
+### Получить истории сотрудников
+
+`GET nest/api/hr/interviews/`
+
+Получает от Strapi истории сотрудников
+
+возвращает 200 Ok
+
+Коллекция Strapi: HrInterviews, API ID: hr-interview
+
+### Получить подробную информацию об истории сотрудника
+
+`GET nest/api/hr/interview-detail/:id/`
+
+id: number - ID вакансии
+
+возвращает 200 Ok
+
+Коллекция Strapi: HrInterviews, API ID: hr-interview
+
+## LandingController
+
+Отвечает за получение информации для лэндинга "Учебна на выживание" - https://onlineschool-1.ru/schoollife/
+
+### Endpoints
+
+Контроллер предоставляет следующие эндпоинты:
+
+| Метод | URL                 | Описание                         |
+| ----- | ------------------- | -------------------------------- |
+| GET   | `nest/api/landing/` | Получить информацию для страницы |
+
+### Получить информацию для страницы
+
+`GET nest/api/landing/`
+
+Получает от Strapi все элементы страницы ScoolLifeBalance
+
+возвращает 200 Ok
+
+Страница Strapi: ScoolLifeBalance, API ID: scool-life-balance
+
+## LayoutController
+
+Получить разметку страницы
+
+`GET nest/api/layout/`
+
+В один объект Получает из Strapi страницы:
+
+- AsideMenu, API ID: aside-menu
+- NewAsideMenu, API ID: new-aside-menu
+- FooterInfo, API ID: footer-info
+- NewFooterInfo, API ID: new-footer-info
+
+Коллекцию RegionContacts, API ID: region-contact. Сортировка по возрастаю, по полю `Sort`
+
+возвращает 200 Ok
+
+```json
+menu: [],
+newMenu: [],
+footerInfo: [],
+newFooterInfo: [],
+regionContacts: [],
+```
+
+## NewsController
+
+Отвечает за получение информации о новостях
+
+### Endpoints
+
+Контроллер предоставляет следующие эндпоинты:
+
+| Метод | URL                          | Описание |
+| ----- | ---------------------------- | -------- |
+| GET   | `nest/api/news/`             |          |
+| GET   | `nest/api/news/all`          |          |
+| GET   | `nest/api/news/detail/:code` |          |
+
+### Получить информацию для страницы новостей
+
+`GET nest/api/news/`
+
+Получает от Strapi информацию для страницы Новости и разделы новостей, хлебные крошки
+
+возвращает 200 Ok
+
+Страница Strapi: NewsPageInfo, API ID: news-page-info
+Коллекция Strapi: NewsSections, API ID: news-section
