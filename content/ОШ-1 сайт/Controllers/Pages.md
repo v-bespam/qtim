@@ -251,3 +251,46 @@ likesCount: number
 
 Коллекция Strapi: HrRecommendFormRequests, API ID: hr-recommend-form-request
 
+## HrController
+
+Определяет
+
+### Endpoints
+
+Контроллер предоставляет следующие эндпоинты:
+
+| Метод | URL                                 | Описание |
+| ----- | ----------------------------------- | -------- |
+| GET   | `nest/api/hr/common-data/`          |          |
+| GET   | `nest/api/hr/main-page-data/`       |          |
+| GET   | `nest/api/hr/vacancies/`            |          |
+| GET   | `nest/api/hr/vacancy-detail/:id/`   |          |
+| GET   | `nest/api/hr/interviews/`           |          |
+| GET   | `nest/api/hr/interview-detail/:id/` |          |
+
+### Получить общую информацию страницы вакансий
+
+`GET nest/api/hr/common-data/`
+
+Получает от Strapi информацию для страницы Вакансии
+
+В случае успеха возвращает 200 Ok
+
+Страница Strapi: HrCommonData, API ID: hr-common-data
+
+### Получить главную страницу вакансий
+
+`GET nest/api/hr/main-page-data/`
+
+Получает от Strapi информацию для страницы Вакансии
+
+В случае успеха возвращает 200 Ok
+
+Страница Strapi: HrMainPage, API ID: hr-main-page
+
+### Получить список вакансий
+
+`GET nest/api/hr/vacancies/`
+
+
+

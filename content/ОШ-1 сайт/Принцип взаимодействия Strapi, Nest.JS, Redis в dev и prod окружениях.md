@@ -15,15 +15,15 @@ tags:
 
 Выходные данные на запросы настраиваются в Strapi.
 
-
+Для работы с вакансиями используется отдельный поддомен - https://team.onlineschool-1.ru/
 
 ## Nest.JS CacheController
 
 Очищает кэш Redis
 
-| Метод | URL                    |
-| ----- | ---------------------- |
-| GET   | `nest/api/cache/clear` |
+| Метод | URL                    | Описание           |
+| ----- | ---------------------- | ------------------ |
+| GET   | `nest/api/cache/clear` | Очистить кэш Redis |
 
 При отправке запроса сначала вызывается `this.redisService.reset()`, который очищает весь кэш при помощи `RedisService`. Затем вызывается `this.searchService.createIndex()`, который пересоздает индекс Elasticsearch для поиска. В конце метод возвращает `true`.
 
