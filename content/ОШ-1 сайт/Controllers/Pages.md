@@ -13,7 +13,7 @@ tags:
 4. HrController
 5. LandingController
 6. LayoutController
-7. NewsController
+7. [[#NewsController|NewsController]]
 8. PageController
 9. TutorsController
 
@@ -395,9 +395,127 @@ regionContacts: [],
 
 `GET nest/api/news/`
 
-Получает от Strapi информацию для страницы Новости и разделы новостей, хлебные крошки
+Получает информацию для страницы Новости и разделы новостей, хлебные крошки
 
 возвращает 200 Ok
 
 Страница Strapi: NewsPageInfo, API ID: news-page-info
 Коллекция Strapi: NewsSections, API ID: news-section
+
+```json
+breadcrumbs = [
+ {
+  title: 'Главная',
+  url: '/',
+ },
+ {
+  title: 'Новости',
+  url: '/news/',
+ },
+];
+```
+
+### Получить список всех новостей
+
+`GET nest/api/news/all`
+
+Получает список всех новостей на сайте
+
+В query может быть передан section?: string; - код секции
+limit: number; - опциональный
+offset: number; - опциональный
+
+offset по умолчанию равен 0, а limit — 11
+
+возвращает 200 Ok
+
+массив новостей из кэша Redis по ключу `news`
+Коллекция Strapi: SchoolNews, API ID: school-news, сортировка в порядке уменьшения
+
+`hasMoreNews` равен `true` если есть еще новости в списке
+
+```json
+{
+hasMoreNews: boolean;
+news: News[]
+}
+```
+
+News:
+
+```json
+{
+  authorName: string | null;
+  code: string;
+  id: number;
+  published_at: Date;
+  section: NewsSection;
+  text: string;
+  title: string;
+  meta?: Meta;
+  img?: Image;
+}
+```
+
+### Получить подробную информацию о новости
+
+`GET nest/api/news/detail/:code`
+
+code: string - код новости
+
+Получить 
+В случае если новость с указанным кодом не найдена, выбрасывает исключение с текстом 'News not found'
+
+К хлебным крошкам добавляется текущий заголовок новости
+
+новость из кэша Redis по ключу `news:${code}`
+Коллекция Strapi: SchoolNews, API ID: school-news
+Страница Strapi: NewsPageInfo, API ID : news-page-info, блоки SocialLinks, WelcomeBlock, Form
+
+## PageController
+
+Отвечает за получение информации
+
+### Endpoints
+
+Контроллер предоставляет следующие эндпоинты:
+
+| Метод | URL                               | Описание                         |
+| ----- | --------------------------------- | -------------------------------- |
+| GET   | `nest/api/pages/`                 | Получить информацию для страницы |
+| GET   | `nest/api/pages/karta-sayta/`     |                                  |
+| GET   | `nest/api/pages/sitemap/`         |                                  |
+| GET   | `nest/api/pages/cosmos-data/`     |                                  |
+| GET   | `nest/api/pages/biblioteka-data/` |                                  |
+| POST  | `nest/api/pages/deactivate/`      |                                  |
+
+### Получить информацию о странице
+
+`GET nest/api/pages/`
+
+В query должен быть передан url страницы - code: string
+
+Вообще не понятно как работает
+
+В случае если страницы с указанным кодом не найдена, выбрасывает исключение с текстом 'Page not found'
+
+из кэша Redis по ключу `page:${pageCode}`
+Коллекция Strapi: Pages, API ID: page
+
+**Выходные данные:** PageDto
+
+```json
+{
+  id: number;
+  url: string;
+  published_at: string | null;
+  created_at: string;
+  updated_at: string;
+  blocks: ConstructorBlock[];
+  headerMenuItems: HeaderAnchorMenuItem[];
+  meta: Meta;
+  breadcrumbs: BreadcrumbItem[];
+  contactUsSocialLinks: SocialLinks[];
+  sitemapConfig: SitemapConfig | null;
+}
+```
