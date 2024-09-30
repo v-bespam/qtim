@@ -1,7 +1,7 @@
 ---
 date: 2024-09-30
 tags:
-  - qtim
+  - ОШ-1-сайт
 ---
 Предназначен для очиски кэша Redis и работы с поиском на сайте при помощи Elasticsearch
 ## CacheController
