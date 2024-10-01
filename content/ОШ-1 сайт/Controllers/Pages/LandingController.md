@@ -3,8 +3,6 @@ date: 2024-09-30
 tags:
   - ОШ-1-сайт
 ---
-## LandingController
-
 Контроллер предназначен для получения информации для лэндинга "Учеба на выживание" - https://onlineschool-1.ru/schoollife/
 
 ### Endpoints
