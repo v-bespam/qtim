@@ -27,7 +27,7 @@ tags:
 - **newMenu** - выполняет поиск в кэше Redis по ключу `new-layout-menu`, если данные не найдены, получает в Strapi элементы страницы NewAsideMenu (API ID: new-aside-menu). Сохраняет их в кэш.
 - **footerInfo** - выполняет поиск в кэше Redis по ключу `footer-info`, если данные не найдены, получает в Strapi элементы страницы FooterInfo (API ID: footer-info). Сохраняет их в кэш.
 - **newFooterInfo** - выполняет поиск в кэше Redis по ключу `new-footer-info`, если данные не найдены, получает в Strapi элементы страницы NewFooterInfo (API ID: new-footer-info). Сохраняет их в кэш.
-- **regionContacts** - выполняет поиск в кэше Redis по ключу `region-contacts`, если данные не найдены, получает в Strapi элементы коллекции RegionContacts (API ID: region-contact), отсортированные по возрастанию. ???. Сохраняет их в кэш.
+- **regionContacts** - выполняет поиск в кэше Redis по ключу `region-contacts`, если данные не найдены, получает в Strapi элементы коллекции RegionContacts (API ID: region-contact), отсортированные по возрастанию. Генерирует URL, добавляя к нему поле `canonical` из свойства `meta`, если оно отсутствует, то URL генерируется из `page.url`. Сохраняет данные в кэш.
 
 *Выходные данные:* Status: `200 OK`
 
