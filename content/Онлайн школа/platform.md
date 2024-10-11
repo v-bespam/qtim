@@ -19,15 +19,15 @@ tags:
 
 | Метод  | URL                        | Описание                       |
 | ------ | -------------------------- | ------------------------------ |
-| GET    | `api/widget/platform/`     | Получение списка всех платформ |
-| GET    | `api/widget/platform/:id/` | Получение платформы по ID      |
-| POST   | `api/widget/platform/`     | Создание новой платформы       |
-| PUT    | `api/widget/platform/:id/` | Обновление данных платформы    |
-| DELETE | `api/widget/platform/:id/` | Удаление платформы             |
+| GET    | `platform/`     | Получение списка всех платформ |
+| GET    | `platform/:id/` | Получение платформы по ID      |
+| POST   | `platform/`     | Создание новой платформы       |
+| PUT    | `platform/:id/` | Обновление данных платформы    |
+| DELETE | `platform/:id/` | Удаление платформы             |
 
 ### Получение списка всех платформ
 
-`GET api/widget/platform/`
+`GET platform/`
 
 *Входные данные:* Отсутствуют
 
@@ -48,7 +48,7 @@ tags:
 
 ### Получение платформы по ID
 
-`GET api/widget/platform/`
+`GET platform/`
 
 *Входные данные:*
 
@@ -71,7 +71,7 @@ tags:
 
 ### Создание новой платформы
 
-`POST api/widget/platform/`
+`POST platform/`
 
 *Входные данные:*
 
@@ -100,7 +100,7 @@ tags:
 
 ### Обновление данных платформы
 
-`PUT api/widget/platform/:id/`
+`PUT platform/:id/`
 
 *Входные данные:*
 
@@ -131,7 +131,7 @@ tags:
 
 ### Удаление платформы
 
-`DELETE api/widget/platform/:id/`
+`DELETE platform/:id/`
 
 *Входные данные:*
 

@@ -19,24 +19,24 @@ tags:
 
 | Метод | URL                                            | Описание                              |
 | ----- | ---------------------------------------------- | ------------------------------------- |
-| GET   | `api/widget/imports/users/`                    | Импорт пользователей                  |
-| GET   | `api/widget/imports/catalogs/`                 | Импорт каталогов                      |
-| GET   | `api/widget/imports/materials/`                | Импорт учебных материалов             |
-| GET   | `api/widget/imports/tests/`                    | Импорт тестов                         |
-| GET   | `api/widget/imports/subjects/`                 | Импорт предметов                      |
-| GET   | `api/widget/imports/programs/`                 | Импорт программ                       |
-| GET   | `api/widget/imports/sections/`                 | Импорт разделов                       |
-| GET   | `api/widget/imports/seo/`                      | Импорт SEO данных                     |
-| GET   | `api/widget/imports/video/`                    | Импорт видео                          |
-| GET   | `api/widget/imports/get-all-ids/:entity/`      | Получение идентификаторов сущности    |
-| POST  | `api/widget/imports/update-entities-slug/`     | Обновление slug                       |
-| GET   | `api/widget/imports/update-sections-subjects/` | Обновление разделов предметов         |
-| GET   | `api/widget/imports/attempts-numbers/`         | Обновление количества попыток         |
-| GET   | `api/widget/imports/set-lesson-sorts/`         | Обновление индексов сортировки уроков |
+| GET   | `imports/users/`                    | Импорт пользователей                  |
+| GET   | `imports/catalogs/`                 | Импорт каталогов                      |
+| GET   | `imports/materials/`                | Импорт учебных материалов             |
+| GET   | `imports/tests/`                    | Импорт тестов                         |
+| GET   | `imports/subjects/`                 | Импорт предметов                      |
+| GET   | `imports/programs/`                 | Импорт программ                       |
+| GET   | `imports/sections/`                 | Импорт разделов                       |
+| GET   | `imports/seo/`                      | Импорт SEO данных                     |
+| GET   | `imports/video/`                    | Импорт видео                          |
+| GET   | `imports/get-all-ids/:entity/`      | Получение идентификаторов сущности    |
+| POST  | `imports/update-entities-slug/`     | Обновление slug                       |
+| GET   | `imports/update-sections-subjects/` | Обновление разделов предметов         |
+| GET   | `imports/attempts-numbers/`         | Обновление количества попыток         |
+| GET   | `imports/set-lesson-sorts/`         | Обновление индексов сортировки уроков |
 
 ### Импорт пользователей
 
-`GET api/widget/imports/users/`
+`GET imports/users/`
 
 *Входные данные:* Отсутствуют
 
@@ -93,7 +93,7 @@ tags:
 
 ### Импорт каталогов
 
-`GET api/widget/imports/catalogs/`
+`GET imports/catalogs/`
 
 *Входные данные:* Отсутствуют
 
@@ -160,7 +160,7 @@ tags:
 
 ### Импорт учебных материалов
 
-`GET api/widget/imports/materials/`
+`GET imports/materials/`
 
 *Входные данные:* Отсутствуют
 
@@ -240,7 +240,7 @@ tags:
 
 ### Импорт тестов
 
-`GET api/widget/imports/tests/`
+`GET imports/tests/`
 
 *Входные данные:*
 
@@ -336,7 +336,7 @@ tags:
 
 ### Импорт предметов
 
-`GET api/widget/imports/subjects/`
+`GET imports/subjects/`
 
 *Входные данные:* Отсутствуют
 
@@ -384,7 +384,7 @@ tags:
 
 ### Импорт программ
 
-`GET api/widget/imports/programs/`
+`GET imports/programs/`
 
 *Входные данные:* Отсутствуют
 
@@ -449,7 +449,7 @@ tags:
 
 ### Импорт разделов
 
-`GET api/widget/imports/sections/`
+`GET imports/sections/`
 
 *Входные данные:* Отсутствуют
 
@@ -551,7 +551,7 @@ tags:
 
 ### Импорт видео
 
-`GETapi/widget/imports/video/`
+`GETimports/video/`
 
 *Входные данные:* Отсутствуют
 
@@ -571,7 +571,7 @@ tags:
 
 ### Получение идентификаторов сущности
 
-`GET api/widget/imports/get-all-ids/:entity/`
+`GET imports/get-all-ids/:entity/`
 
 *Входные данные:*
 
@@ -595,7 +595,7 @@ tags:
 
 ### Обновление slug
 
-`POST api/widget/imports/update-entities-slug/`
+`POST imports/update-entities-slug/`
 
 *Входные данные:*
 
@@ -625,7 +625,7 @@ tags:
 
 ### Обновление разделов предметов 
 
-`GET api/widget/imports/update-sections-subjects/`
+`GET imports/update-sections-subjects/`
 
 *Входные данные:* Отсутствуют
 
@@ -659,7 +659,7 @@ tags:
 
 ### Обновление количества попыток
 
-`GET api/widget/imports/attempts-numbers/`
+`GET imports/attempts-numbers/`
 
 *Входные данные:* Отсутствуют
 
@@ -691,7 +691,7 @@ tags:
 
 ### Обновление индексов сортировки уроков
 
-`GET api/widget/imports/set-lesson-sorts/`
+`GET imports/set-lesson-sorts/`
 
 *Входные данные:* Отсутствуют
 
